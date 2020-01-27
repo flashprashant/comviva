@@ -1,0 +1,24 @@
+{
+    "family": "comviva-task",
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+
+    "containerDefinitions": [
+        {
+            "image": "prashant01/comviva:18",
+            "name": "sample-app",
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
+
